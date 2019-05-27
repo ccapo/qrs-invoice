@@ -1,0 +1,101 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QRS Invoice</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .section-container {
+      max-width: 800px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="container">
+
+  <tabs>
+    <tab name="Invoices" :selected="true">
+      <section class="section section-container" style="padding-top: 24px; padding-bottom: 5px;">
+          <h2 class="title">Invoices</h2>
+          <contact v-for="contact in contacts"
+              :key="contact.name"
+              :contact="contact"
+              @save-contact="onAddOrUpdateContact" 
+              @delete-contact="deleteContact" />
+      </section>
+      <section class="section section-container" style="padding-bottom: 10px;">
+      <div class="box">
+        <add-update-contact title="Create Invoice" @save-contact="onAddOrUpdateContact" />
+      </div>
+      </section>
+    </tab>
+    <tab name="Projects">
+      <section class="section section-container" style="padding-top: 24px; padding-bottom: 5px;">
+          <h2 class="title">Projects</h2>
+          <contact v-for="contact in contacts"
+              :key="contact.name"
+              :contact="contact"
+              @save-contact="onAddOrUpdateContact" 
+              @delete-contact="deleteContact" />
+      </section>
+      <section class="section section-container" style="padding-bottom: 10px;">
+      <div class="box">
+        <add-update-contact title="Create Project" @save-contact="onAddOrUpdateContact" />
+      </div>
+      </section>
+    </tab>
+    <tab name="Items">
+      <section class="section section-container" style="padding-top: 24px; padding-bottom: 5px;">
+          <h2 class="title">Items</h2>
+          <contact v-for="contact in contacts"
+              :key="contact.name"
+              :contact="contact"
+              @save-contact="onAddOrUpdateContact" 
+              @delete-contact="deleteContact" />
+      </section>
+      <section class="section section-container" style="padding-bottom: 10px;">
+      <div class="box">
+        <add-update-contact title="Create Item" @save-contact="onAddOrUpdateContact" />
+      </div>
+      </section>
+    </tab>
+    <tab name="Clients">
+      <section class="section section-container" style="padding-top: 24px; padding-bottom: 5px;">
+          <h2 class="title">Clients</h2>
+          <contact v-for="contact in contacts"
+              :key="contact.name"
+              :contact="contact"
+              @save-contact="onAddOrUpdateContact" 
+              @delete-contact="deleteContact" />
+      </section>
+      <section class="section section-container" style="padding-bottom: 10px;">
+      <div class="box">
+        <add-update-contact title="Create Client" @save-contact="onAddOrUpdateContact" />
+      </div>
+      </section>
+    </tab>
+    <tab name="Settings">
+      <section class="section section-container" style="padding-top: 24px; padding-bottom: 5px;">
+          <h2 class="title">Settings</h2>
+          <contact v-for="contact in contacts"
+              :key="contact.name"
+              :contact="contact"
+              @save-contact="onAddOrUpdateContact" />
+      </section>
+    </tab>
+  </tabs>
+  
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+
