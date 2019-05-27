@@ -2,7 +2,7 @@
 
 A simple invoice application based on the blog article [Using Sequelize.js and SQLite in an Express.js App](http://stackabuse.com/using-sequelize-js-and-sqlite-in-an-express-js-app/).
 
-## Usage
+### Usage
 
 1) Clone repo
 
