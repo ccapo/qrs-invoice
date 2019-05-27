@@ -10,8 +10,7 @@ A simple invoice application based on the blog article [Using Sequelize.js and S
 git clone https://github.com/ccapo/qrs-invoice.git
 ```
 
-2) 
-install dependencies (Built with Node.js v10.15)
+2) Install dependencies (Built with Node.js v10.15)
 
 ```sh
 cd qrs-invoice/
